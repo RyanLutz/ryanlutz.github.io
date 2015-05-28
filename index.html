@@ -3,30 +3,125 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Test</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Portfolio Page</title>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/all.js"></script>
   </head>
   <body>
-    <header>
-      <nav class="main-menu">
-        <ul class="top-menu">
-          <li class="top-menu-item"><a>Menu Item</a></li>
-          <li class="top-menu-item"><a>Menu Item</a></li>
-          <li class="top-menu-item"><a>Menu Item</a>
-            <ul class="sub-menu">
-              <li class="sub-menu-item"><a>Sub Menu Item</a></li>
-              <li class="sub-menu-item"><a>Sub Menu Item</a></li>
-              <li class="sub-menu-item"><a>Sub Menu Item</a></li>
-            </ul>
-          </li>
-          <li class="top-menu-item"><a>Menu Item</a></li>
-          <li class="top-menu-item"><a>Menu Item</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section></section>
-    <footer></footer>
+    <aside class="page-aside">
+      <nav class="main-nav"><a href="#first" data-menuanchor="first" class="main-nav-item">Item 1</a><a href="#second" data-menuanchor="second" class="main-nav-item">Item 2</a><a href="#third" data-menuanchor="third" class="main-nav-item">Item 3</a><a href="#fourth" data-menuanchor="fourth" class="main-nav-item">Item 4</a><a href="#fifth" data-menuanchor="fifth" class="main-nav-item">Item 5</a></nav>
+    </aside>
+    <div class="page-wrapper">
+      <section data-menuanchor="first" class="page-section">
+        <h2> <a name="#first">Hello</a></h2>
+      </section>
+      <section data-menuanchor="second" class="page-section">
+        <h2> <a name="#second">Skills</a></h2>
+        <div class="slide">
+          <canvas id="SoftwareChart" width="400px" height="400px"></canvas>
+          <canvas id="WebChart" width="300px" height="300px"></canvas>
+        </div>
+      </section>
+      <section data-menuanchor="third" class="page-section">
+        <h2> <a name="#third">Item 3</a></h2>
+      </section>
+      <section data-menuanchor="fourth" class="page-section">
+        <h2> <a name="#fourth">Item 4</a></h2>
+      </section>
+      <section data-menuanchor="fifth" class="page-section">
+        <h2> <a name="#fifth">Item 5</a></h2>
+      </section>
+    </div>
+    <script>
+      $('.page-wrapper').fullpage({
+        anchors: ['first', 'second', 'third', 'fourth', 'fifth'],
+        menu: '.main-nav',
+        sectionSelector: 'section.page-section'
+      });
+      
+      var ctx1 = $("#SoftwareChart").get(0).getContext("2d");
+      
+      var ctx2 = $("#WebChart").get(0).getContext("2d");
+      
+      var gradient1 = ctx1.createLinearGradient(0, 0, 0, 400);
+      gradient1.addColorStop(0, '#ff9170');   
+      gradient1.addColorStop(1, '#ff3f05');
+      
+      var gradient2 = ctx1.createLinearGradient(0, 0, 0, 400);
+      gradient2.addColorStop(0, '#ffa58a');   
+      gradient2.addColorStop(1, '#ff693c');
+      
+      var gradient3 = ctx2.createLinearGradient(0, 0, 0, 400);
+      gradient3.addColorStop(0, '#ff9170');   
+      gradient3.addColorStop(1, '#ff3f05');
+      
+      var gradient4 = ctx2.createLinearGradient(0, 0, 0, 400);
+      gradient4.addColorStop(0, '#f5d147');   
+      gradient4.addColorStop(1, '#dfb30c');
+      
+      var softwareSkillsData = {
+        labels: ["Photoshop", "Illustrator", "Indesign", "Premiere", "After Effects", "SpeedGrade"],
+        datasets: [
+          {
+            label: "My Software Skills Dataset",
+            fillColor: gradient1,
+            highlightFill: gradient2,
+            data: [96, 87, 82, 68, 55, 53]
+          },
+        ]
+      };
+      
+      var webSkillsData = 
+        [
+          {
+            value: 90,
+            color: gradient3,
+            highlight: "#ff9170",
+            label: "CSS"
+          },
+          {
+            value: 97,
+            color: gradient3,
+            highlight: "#ff9170",
+            label: "SASS"
+          },
+          {
+            value: 82,
+            color: gradient3,
+            highlight: "#ff9170",
+            label: "HTML"
+          },
+          {
+            value: 50,
+            color: gradient3,
+            highlight: "#ff9170",
+            label: "JS/Jquery"
+          },
+          {
+            value: 33,
+            color: gradient4,
+            highlight: "#f5d147",
+            label: "PHP"
+          },
+          {
+            value: 28,
+            color: gradient4,
+            highlight: "#f5d147",
+            label: "MySQL"
+          },
+          {
+            value: 12,
+            color: gradient4,
+            highlight: "#f5d147",
+            label: "Ruby on Rails"
+          }
+        ];
+      
+      var SoftwareChart = new Chart(ctx1).Bar(softwareSkillsData);
+      
+      var WebChart = new Chart(ctx2).Pie(webSkillsData);
+    </script>
   </body>
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="js/all.js"></script>
 </html>
