@@ -10,21 +10,37 @@
   </head>
   <body>
     <aside class="page-aside">
-      <nav class="main-nav"><a href="#first" data-menuanchor="first" class="main-nav-item">Item 1</a><a href="#second" data-menuanchor="second" class="main-nav-item">Item 2</a><a href="#third" data-menuanchor="third" class="main-nav-item">Item 3</a><a href="#fourth" data-menuanchor="fourth" class="main-nav-item">Item 4</a><a href="#fifth" data-menuanchor="fifth" class="main-nav-item">Item 5</a></nav>
+      <nav class="main-nav"><a href="#intro" data-menuanchor="intro" class="main-nav-item">Intro</a><a href="#skills" data-menuanchor="skills" class="main-nav-item">Skills</a><a href="#third" data-menuanchor="third" class="main-nav-item">Item 3</a><a href="#fourth" data-menuanchor="fourth" class="main-nav-item">Item 4</a><a href="#fifth" data-menuanchor="fifth" class="main-nav-item">Item 5</a></nav>
     </aside>
     <div class="page-wrapper">
-      <section data-menuanchor="first" class="page-section">
-        <h2> <a name="#first">Hello</a></h2>
+      <section data-menuanchor="intro" class="page-section">
+        <h2> <a name="#intro">Welcome!</a></h2>
+        <p class="indent">Hello! My name is Ryan. You have found my web design protfolio website. Feel free to browse my latest projects.</p>
       </section>
-      <section data-menuanchor="second" class="page-section">
-        <h2> <a name="#second">Skills</a>
-          <section class="slide">
-            <canvas id="SoftwareChart" width="400px" height="400px"></canvas>
-          </section>
-          <section class="slide">
-            <canvas id="WebChart" width="300px" height="300px"></canvas>
-          </section>
-        </h2>
+      <section data-menuanchor="skills" class="page-section">
+        <h2> <a name="#skills">Skills</a></h2>
+        <section data-anchor="softwareSkills" class="slide">
+          <h2 class="centered">Software Skills</h2>
+          <div class="flexbox">
+            <canvas id="SoftwareSkills"></canvas>
+          </div>
+          <p class="indent">I was first introduced to Adobe Creative Suite in college. I quickly fell in love with Illustrator and Flash. After college I continued to use those in my new job at Dougherty Forestry Manufacturing. I brodened and improved upon my Creative Suite skills for four years.  </p>
+        </section>
+        <section data-anchor="webSkills" class="slide">
+          <h2 class="centered">Web Design / Development Skills</h2>
+          <div class="flexbox">
+            <canvas id="WebSkills"></canvas>
+            <div id="WebSkillsLegend"></div>
+          </div>
+          <p class="indent">I began developing websites first at the front end with css, html, flash, and javascript. As I continued to develop websites, the need arose to incorperate a database. From there I learned a little about PHP, MySQL, and AJAX calls. </p>
+        </section>
+        <section data-anchor="personalSkills" class="slide">
+          <h2 class="centered">Personal Skills</h2>
+          <div class="flexbox">
+            <canvas id="PersonalSkills"></canvas>
+          </div>
+          <p class="indent">I enjoy designing and am interested in furthering my coding skills. Every now and then I like to have a cold beer. I'm to old (not really that old) to sleep very long. I'm dependent on coffee. I like to run and bike; these acivities are therapeutic to me. </p>
+        </section>
       </section>
       <section data-menuanchor="third" class="page-section">
         <h2> <a name="#third">Item 3</a></h2>
@@ -39,94 +55,137 @@
     <script>
       $(document).ready(function() {
         $('.page-wrapper').fullpage({
-          anchors: ['first', 'second', 'third', 'fourth', 'fifth'],
+          anchors: ['intro', 'skills', 'third', 'fourth', 'fifth'],
           menu: '.main-nav',
           sectionSelector: 'section.page-section',
           slideSelector: 'section.slide',
+          slidesNavigation: true,
+          slidesNavPosition: 'bottom',
+          
+          afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
+            console.log(slideAnchor);
+            if(anchorLink == 'skills') {
+              if(slideAnchor == 'softwareSkills'){
+                SoftwareSkills.render()
+              };
+              if(slideAnchor == 'webSkills'){
+                WebSkills.render()
+              };
+              if(slideAnchor == 'personalSkills'){
+                PersonalSkills.render()
+              };
+            } else {
+              SoftwareSkills.clear();
+              WebSkills.clear();
+              PersonalSkills.clear();
+            }
+          }
         });
         
+        var $rorange = '#ff693c',
+            $rorangeHighlight = '#ff9170',
+            $purple = '#5832ac',
+            $purpleHighlight = '#7149ca';
       
-        var ctx1 = $("#SoftwareChart").get(0).getContext("2d");
+        var ctx = 
+          [
+            $("#SoftwareSkills").get(0).getContext("2d"),
+            $("#WebSkills").get(0).getContext("2d"),
+            $("#PersonalSkills").get(0).getContext("2d")
+          ];
         
-        var ctx2 = $("#WebChart").get(0).getContext("2d");
-        
-        var gradient1 = ctx1.createLinearGradient(0, 0, 0, 400);
-        gradient1.addColorStop(0, '#ff9170');   
-        gradient1.addColorStop(1, '#ff3f05');
-        
-        var gradient2 = ctx1.createLinearGradient(0, 0, 0, 400);
-        gradient2.addColorStop(0, '#ffa58a');   
-        gradient2.addColorStop(1, '#ff693c');
-        
-        var gradient3 = ctx2.createLinearGradient(0, 0, 0, 400);
-        gradient3.addColorStop(0, '#ff9170');   
-        gradient3.addColorStop(1, '#ff3f05');
-        
-        var gradient4 = ctx2.createLinearGradient(0, 0, 0, 400);
-        gradient4.addColorStop(0, '#f5d147');   
-        gradient4.addColorStop(1, '#dfb30c');
-        
+        //make data
         var softwareSkillsData = {
           labels: ["Photoshop", "Illustrator", "Indesign", "Premiere", "After Effects", "SpeedGrade"],
           datasets: [
             {
               label: "My Software Skills Dataset",
-              fillColor: gradient1,
-              highlightFill: gradient2,
+              fillColor: $rorange,
+              highlightFill: $rorangeHighlight,
               data: [96, 87, 82, 68, 55, 53]
             },
           ]
         };
-        
-        var webSkillsData = 
-          [
-            {
-              value: 90,
-              color: gradient3,
-              highlight: "#ff9170",
-              label: "CSS"
-            },
-            {
-              value: 97,
-              color: gradient3,
-              highlight: "#ff9170",
-              label: "SASS"
-            },
-            {
-              value: 82,
-              color: gradient3,
-              highlight: "#ff9170",
-              label: "HTML"
-            },
-            {
-              value: 50,
-              color: gradient3,
-              highlight: "#ff9170",
-              label: "JS/Jquery"
-            },
-            {
-              value: 33,
-              color: gradient4,
-              highlight: "#f5d147",
-              label: "PHP"
-            },
-            {
-              value: 28,
-              color: gradient4,
-              highlight: "#f5d147",
-              label: "MySQL"
-            },
-            {
-              value: 12,
-              color: gradient4,
-              highlight: "#f5d147",
-              label: "Ruby on Rails"
-            }
-          ];
       
-        var SoftwareChart = new Chart(ctx1).Bar(softwareSkillsData);
+        var webSkillsData = [
+          {
+            value: 90,
+            color: '#ff693c',
+            highlight: '#ff5522',
+            label: "CSS",
+            labelColor : 'white',
+            labelFontSize : '16'
+          },
+          {
+            value: 97,
+            color: '#fd7e57',
+            highlight: '#ff5522',
+            label: "SASS"
+          },
+          {
+            value: 82,
+            color: '#fc9272',
+            highlight: '#ff5522',
+            label: "HTML"
+          },
+          {
+            value: 50,
+            color: '#fba68c',
+            highlight: '#ff5522',
+            label: "JS/Jquery"
+          },
+          {
+            value: 33,
+            color: '#633abd',
+            highlight: '#5832ac',
+            label: "PHP"
+          },
+          {
+            value: 28,
+            color: '#724cc5',
+            highlight: '#5832ac',
+            label: "MySQL"
+          },
+          {
+            value: 12,
+            color: '#8261c9',
+            highlight: '#5832ac',
+            label: "Ruby on Rails"
+          }
+        ];
         
-        var WebChart = new Chart(ctx2).Pie(webSkillsData);
+          
+          
+          var personalSkillsData = {
+            labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+            datasets: [
+              {
+                label: "My First dataset",
+                fillColor: "rgba(255, 105, 60, 0.5)",
+                strokeColor: "#ff693c",
+                pointColor: "#ff693c",
+                pointStrokeColor: "#fff",
+                pointHighlightFill: "#fff",
+                pointHighlightStroke: "rgba(220,220,220,1)",
+                data: [62, 28, 32, 78, 46, 49, 82]
+              }
+            ]
+          };
+        
+        //make charts
+        var SoftwareSkills = new Chart(ctx[0]).Bar(softwareSkillsData, {
+          scaleFontSize: 14,
+          barShowStroke : false,
+          barValueSpacing : 10
+        });
+        
+        var WebSkills = new Chart(ctx[1]).Pie(webSkillsData, {
+          segmentShowStroke : false,
+          legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
+        });
+        $('#WebSkillsLegend').html( WebSkills.generateLegend() );
+        var PersonalSkills = new Chart(ctx[2]).Radar(personalSkillsData);
+      
       });
     </script>
   </body>
