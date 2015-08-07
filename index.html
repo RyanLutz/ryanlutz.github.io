@@ -3,190 +3,39 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Portfolio Page</title>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/all.js"></script>
   </head>
-  <body>
-    <aside class="page-aside">
-      <nav class="main-nav"><a href="#intro" data-menuanchor="intro" class="main-nav-item">Intro</a><a href="#skills" data-menuanchor="skills" class="main-nav-item">Skills</a><a href="#third" data-menuanchor="third" class="main-nav-item">Item 3</a><a href="#fourth" data-menuanchor="fourth" class="main-nav-item">Item 4</a><a href="#fifth" data-menuanchor="fifth" class="main-nav-item">Item 5</a></nav>
-    </aside>
+  <body class="home">
     <div class="page-wrapper">
-      <section data-menuanchor="intro" class="page-section">
-        <h2> <a name="#intro">Welcome!</a></h2>
-        <p class="indent">Hello! My name is Ryan. You have found my web design protfolio website. Feel free to browse my latest projects.</p>
-      </section>
-      <section data-menuanchor="skills" class="page-section">
-        <h2> <a name="#skills">Skills</a></h2>
-        <section data-anchor="softwareSkills" class="slide">
-          <h2 class="centered">Software Skills</h2>
-          <div class="flexbox">
-            <canvas id="SoftwareSkills"></canvas>
-          </div>
-          <p class="indent">I was first introduced to Adobe Creative Suite in college. I quickly fell in love with Illustrator and Flash. After college I continued to use those in my new job at Dougherty Forestry Manufacturing. I brodened and improved upon my Creative Suite skills for four years.  </p>
-        </section>
-        <section data-anchor="webSkills" class="slide">
-          <h2 class="centered">Web Design / Development Skills</h2>
-          <div class="flexbox">
-            <canvas id="WebSkills"></canvas>
-            <div id="WebSkillsLegend"></div>
-          </div>
-          <p class="indent">I began developing websites first at the front end with css, html, flash, and javascript. As I continued to develop websites, the need arose to incorperate a database. From there I learned a little about PHP, MySQL, and AJAX calls. </p>
-        </section>
-        <section data-anchor="personalSkills" class="slide">
-          <h2 class="centered">Personal Skills</h2>
-          <div class="flexbox">
-            <canvas id="PersonalSkills"></canvas>
-          </div>
-          <p class="indent">I enjoy designing and am interested in furthering my coding skills. Every now and then I like to have a cold beer. I'm to old (not really that old) to sleep very long. I'm dependent on coffee. I like to run and bike; these acivities are therapeutic to me. </p>
-        </section>
-      </section>
-      <section data-menuanchor="third" class="page-section">
-        <h2> <a name="#third">Item 3</a></h2>
-      </section>
-      <section data-menuanchor="fourth" class="page-section">
-        <h2> <a name="#fourth">Item 4</a></h2>
-      </section>
-      <section data-menuanchor="fifth" class="page-section">
-        <h2> <a name="#fifth">Item 5</a></h2>
-      </section>
-    </div>
-    <script>
-      $(document).ready(function() {
-        $('.page-wrapper').fullpage({
-          anchors: ['intro', 'skills', 'third', 'fourth', 'fifth'],
-          menu: '.main-nav',
-          sectionSelector: 'section.page-section',
-          slideSelector: 'section.slide',
-          slidesNavigation: true,
-          slidesNavPosition: 'bottom',
-          
-          afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){
-            console.log(slideAnchor);
-            if(anchorLink == 'skills') {
-              if(slideAnchor == 'softwareSkills'){
-                SoftwareSkills.render()
-              };
-              if(slideAnchor == 'webSkills'){
-                WebSkills.render()
-              };
-              if(slideAnchor == 'personalSkills'){
-                PersonalSkills.render()
-              };
-            } else {
-              SoftwareSkills.clear();
-              WebSkills.clear();
-              PersonalSkills.clear();
-            }
-          }
-        });
-        
-        var $rorange = '#ff693c',
-            $rorangeHighlight = '#ff9170',
-            $purple = '#5832ac',
-            $purpleHighlight = '#7149ca';
-      
-        var ctx = 
-          [
-            $("#SoftwareSkills").get(0).getContext("2d"),
-            $("#WebSkills").get(0).getContext("2d"),
-            $("#PersonalSkills").get(0).getContext("2d")
-          ];
-        
-        //make data
-        var softwareSkillsData = {
-          labels: ["Photoshop", "Illustrator", "Indesign", "Premiere", "After Effects", "SpeedGrade"],
-          datasets: [
-            {
-              label: "My Software Skills Dataset",
-              fillColor: $rorange,
-              highlightFill: $rorangeHighlight,
-              data: [96, 87, 82, 68, 55, 53]
-            },
-          ]
-        };
-      
-        var webSkillsData = [
-          {
-            value: 90,
-            color: '#ff693c',
-            highlight: '#ff5522',
-            label: "CSS",
-            labelColor : 'white',
-            labelFontSize : '16'
-          },
-          {
-            value: 97,
-            color: '#fd7e57',
-            highlight: '#ff5522',
-            label: "SASS"
-          },
-          {
-            value: 82,
-            color: '#fc9272',
-            highlight: '#ff5522',
-            label: "HTML"
-          },
-          {
-            value: 50,
-            color: '#fba68c',
-            highlight: '#ff5522',
-            label: "JS/Jquery"
-          },
-          {
-            value: 33,
-            color: '#633abd',
-            highlight: '#5832ac',
-            label: "PHP"
-          },
-          {
-            value: 28,
-            color: '#724cc5',
-            highlight: '#5832ac',
-            label: "MySQL"
-          },
-          {
-            value: 12,
-            color: '#8261c9',
-            highlight: '#5832ac',
-            label: "Ruby on Rails"
-          }
-        ];
-        
-          
-          
-          var personalSkillsData = {
-            labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
-            datasets: [
-              {
-                label: "My First dataset",
-                fillColor: "rgba(255, 105, 60, 0.5)",
-                strokeColor: "#ff693c",
-                pointColor: "#ff693c",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(220,220,220,1)",
-                data: [62, 28, 32, 78, 46, 49, 82]
+      <header class="page-header">
+        <nav class="page-nav"><a href="index.html">home</a><a href="about.html">about</a><a href="work.html">portfolio</a></nav>
+        <script>
+          $(document).ready(function() {
+            var page = window.location.pathname.split('/')[1];
+            $('nav.home > a').each( function() {
+              if ($(this).attr('href') === page){
+                $(this).addClass('active')
               }
-            ]
-          };
-        
-        //make charts
-        var SoftwareSkills = new Chart(ctx[0]).Bar(softwareSkillsData, {
-          scaleFontSize: 14,
-          barShowStroke : false,
-          barValueSpacing : 10
-        });
-        
-        var WebSkills = new Chart(ctx[1]).Pie(webSkillsData, {
-          segmentShowStroke : false,
-          legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"
-        });
-        $('#WebSkillsLegend').html( WebSkills.generateLegend() );
-        var PersonalSkills = new Chart(ctx[2]).Radar(personalSkillsData);
-      
-      });
-    </script>
+            });
+            console.log(page);
+          });
+        </script>
+      </header>
+      <section class="page-section m-page-section middle">
+        <h1 class="centered">Hello!</h1>
+        <div class="table">
+          <div class="col-5 centered"><img src="img/headshot_square.jpg" class="headshot"></div>
+          <div class="col-7">
+            <p class="indent"> <i>As a kid, I loved to draw. My favorite things where machines and systems. I liked to map out how things worked and display them in fun and quirky ways. I earned a graphic design degree in college, as the idea of marrying art and technology fascinated me. While working at a small manufacturing company called Dougherty Forestry, I found my niche. I was asked to create the company website. I found that my favorite aspect of web design was taking something from conception and creating a living and interactive space users could easily navigate with little effort. In this website, you will find some samplings of my work throughout the years. Feel free to browse at your leisure.</i></p>
+          </div>
+        </div>
+      </section>
+      <footer class="page-footer centered">
+        <nav class="contact"><a mailto="ryan.r.lutz@gmail.com" class="fa fa-envelope"></a><a href="https://www.linkedin.com/pub/ryan-lutz/58/3a7/339" class="fa fa-linkedin"></a><a href="https://www.behance.net/RyanRLutz" class="fa fa-behance"></a></nav>
+      </footer>
+    </div>
   </body>
 </html>
