@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Portfolio Page</title>
+    <script src="js/all.js"></script>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="page-header">
+        <nav class="page-nav"><a href="index.html">home</a><a href="about.html">about</a><a href="work.html">portfolio</a></nav>
+        <script>
+          $(document).ready(function() {
+            var page = window.location.pathname.split('/')[1];
+            $('nav.home > a').each( function() {
+              if ($(this).attr('href') === page){
+                $(this).addClass('active')
+              }
+            });
+            console.log(page);
+          });
+        </script>
+      </header>
+      <section class="page-section">
+        <div class="col-12 col-last">
+          <h3 class="underlined">Dougherty Forestry Manufacturing</h3>
+        </div>
+        <div class="col-4 tiles">
+          <div class="tile"><a href="doughertyforestry.html#turbosaw_website"><img src="img/work/website_clipped.jpg" alt=""></a></div>
+          <div class="tile"><a href="doughertyforestry.html#turbosaw_video"><img src="img/work/poster_clipped.jpg" alt=""></a></div>
+        </div>
+        <div class="col-4 tiles">
+          <div class="tile"><a href="doughertyforestry.html#turbosaw_admin"><img src="img/work/admin_clipped.jpg" alt=""></a></div>
+          <div class="tile"><a href="doughertyforestry.html#landpro_website"><img src="img/work/website_clipped.jpg" alt=""></a></div>
+        </div>
+        <div class="col-4 tiles col-last">
+          <div class="tile"><a href="doughertyforestry.html#turbosaw_posters"><img src="img/work/poster_clipped.jpg" alt=""></a></div>
+        </div>
+        <div class="col-12 col-last">
+          <h3 class="underlined">Client Work</h3>
+        </div>
+        <div class="col-4 tiles">
+          <div class="tile"><a href="doughertyforestry.html#turbosaw_posters"><img src="img/work/ewa_clipped.png" alt=""></a></div>
+        </div>
+        <div class="col-4 tiles">
+          <div class="tile"><a href="doughertyforestry.html#turbosaw_posters"><img src="img/work/trove_box_clipped.png" alt=""></a></div>
+        </div>
+        <div class="col-12 col-last">
+          <h3 class="underlined">Other</h3>
+        </div>
+        <div class="col-4 tiles">
+          <div class="tile"><a href="doughertyforestry.html#turbosaw_posters"><img src="img/work/burger_chop_clipped.jpg" alt=""></a></div>
+        </div>
+      </section>
+      <footer class="page-footer centered">
+        <nav class="contact"><a mailto="ryan.r.lutz@gmail.com" class="fa fa-envelope"></a><a href="https://www.linkedin.com/pub/ryan-lutz/58/3a7/339" class="fa fa-linkedin"></a><a href="https://www.behance.net/RyanRLutz" class="fa fa-behance"></a></nav>
+      </footer>
+    </div>
+  </body>
+</html>
