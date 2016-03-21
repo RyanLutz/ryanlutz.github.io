@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <title>Portfolio Page</title>
   </head>
@@ -29,10 +30,87 @@
         <div class="container">
           <h1 class="text-center">My work</h1>
           <hr>
-          <div class="row"><a id="Cycler1" href="doughertyforestry.html" class="tile-large"><img src="./img/dougherty_forestry/torque_saw_square.jpg"><img src="./img/dougherty_forestry/tractor_saw_square.jpg"><img src="./img/dougherty_forestry/rotator_saw_square.jpg"></a><a class="tile"><img src="http://loremflickr.com/480/480/graphic,design/all?random=2"></a><a class="tile"><img src="http://loremflickr.com/480/480/graphic,design/all?random=3"></a><a class="tile"><img src="http://loremflickr.com/480/480/graphic,design/all?random=4"></a><a class="tile"><img src="http://loremflickr.com/480/480/graphic,design/all?random=5"></a></div>
+          <div id="Tiles" class="row collapse in">
+            <div id="Cycler1" class="tile-large">
+              <div class="tag">Dougherty Forestry</div>
+              <div class="sub-tag">click to learn more</div><a href="doughertyforestry.html"></a><img src="./img/dougherty_forestry/torque_saw_square.jpg"><img src="./img/dougherty_forestry/tractor_saw_square.jpg"><img src="./img/dougherty_forestry/rotator_saw_square.jpg">
+            </div>
+            <div class="tile"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Example1" data-target="#Example1" class="tile-button"></a>
+              <div class="tag">Dougherty Forestry</div>
+              <div class="sub-tag">click to learn more</div><img src="./img/college/february_square.jpg">
+            </div>
+            <div class="tile"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Example2" data-target="#Example2" class="tile-button"></a>
+              <div class="tag">Dougherty Forestry</div>
+              <div class="sub-tag">click to learn more</div><img src="./img/college/numbum_square.jpg">
+            </div>
+            <div class="tile"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Example3" data-target="#Example3" class="tile-button"></a>
+              <div class="tag">Dougherty Forestry</div>
+              <div class="sub-tag">click to learn more</div><img src="./img/college/tide_square.jpg">
+            </div>
+            <div id="Cycler2" class="tile"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="College" data-target="#College" class="tile-button"></a>
+              <div class="tag">College Work</div>
+              <div class="sub-tag">click to learn more</div><img src="./img/college/burger_chop_square.jpg"><img src="./img/college/numbum_square.jpg"><img src="./img/college/tide_square.jpg">
+            </div>
+          </div>
+          <div id="College" class="row collapse slideshow-panel">
+            <button role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="btn btn-primary to-tiles">Back</button>
+            <div id="CollegeCarousel" class="slick-carousel">
+              <div class="slick-slide"><img src="./img/college/tide_boxes.jpg">
+                <p class="text-center">more words</p>
+              </div>
+              <div class="slick-slide"><img src="./img/college/burger_chop.jpg">
+                <p class="text-center">more words</p>
+              </div>
+              <div class="slick-slide"><img src="./img/college/morning_stroll.jpg">
+                <p class="text-center">more words</p>
+              </div>
+            </div>
+          </div>
+          <div id="Example1" class="row collapse slideshow-panel">
+            <button role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="btn btn-primary to-tiles">Back</button>
+            <div id="exampleCarousel1" class="slick-carousel">
+              <div class="slick-slide"><img src="./img/college/tide_boxes.jpg">
+                <p class="text-center">more words</p>
+              </div>
+              <div class="slick-slide"><img src="./img/college/burger_chop.jpg">
+                <p class="text-center">more words</p>
+              </div>
+              <div class="slick-slide"><img src="./img/college/morning_stroll.jpg">
+                <p class="text-center">more words</p>
+              </div>
+            </div>
+          </div>
+          <div id="Example2" class="row collapse slideshow-panel">
+            <button role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="btn btn-primary to-tiles">Back</button>
+            <div id="exampleCarousel2" class="slick-carousel">
+              <div class="slick-slide"><img src="./img/college/tide_boxes.jpg">
+                <p class="text-center">more words</p>
+              </div>
+              <div class="slick-slide"><img src="./img/college/burger_chop.jpg">
+                <p class="text-center">more words</p>
+              </div>
+              <div class="slick-slide"><img src="./img/college/morning_stroll.jpg">
+                <p class="text-center">more words</p>
+              </div>
+            </div>
+          </div>
+          <div id="Example3" class="row collapse slideshow-panel">
+            <button role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="btn btn-primary to-tiles">Back</button>
+            <div id="exampleCarousel3" class="slick-carousel">
+              <div class="slick-slide"><img src="./img/college/tide_boxes.jpg">
+                <p class="text-center">more words</p>
+              </div>
+              <div class="slick-slide"><img src="./img/college/burger_chop.jpg">
+                <p class="text-center">more words</p>
+              </div>
+              <div class="slick-slide"><img src="./img/college/morning_stroll.jpg">
+                <p class="text-center">more words</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <section id="about" class="page-section whitesmoke">
+      <section id="about" class="page-section background-whitesmoke">
         <div class="container"><a href="*" name="about"></a>
           <h1 class="text-center">About me</h1>
           <hr>
@@ -86,9 +164,20 @@
       </section>
     </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script type="text/javascript" src="./lib/slick.min.js"></script>
     <script>
+      $(document).ready(function(){
+        $('#CollegeCarousel').slick({
+          dots: true,
+          infinite: true,
+          speed: 300,
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true
+        });
+      });
       $(function() {
         $('a[href*="#"]:not([href="#"])').click(function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -102,6 +191,21 @@
             }
           }
         });
+      });
+      
+      $('.slideshow-panel').on('shown.bs.collapse', function() {
+          var div = $(this);
+          var width = div.width();
+          console.log(width)
+          div.css('height', width / 2);
+      });
+      //tiles functions
+      $(".to-tiles").click(function () {
+        $this = $(this).parent('.collapse');
+        $this.collapse('hide');
+      });
+      $(".tile-button").click(function () {
+        $('#Tiles').collapse('hide');
       });
       
       document.addEventListener("DOMContentLoaded", function() {

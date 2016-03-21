@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){document.getElementById("user-greeting").textContent="Welcome back, Bart"});

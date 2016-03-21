@@ -1,0 +1,1 @@
+function cycleImages(){var e=$("#Cycler1 .active"),c=e.next().length>0?e.next():$("#Cycler1 img:first");c.css("z-index",2),e.fadeOut(1500,function(){e.css("z-index",1).show().removeClass("active"),c.css("z-index",3).addClass("active")})}$(document).ready(function(){console.log("ready"),setInterval("cycleImages()",5e3)});
