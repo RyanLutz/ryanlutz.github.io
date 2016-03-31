@@ -12,17 +12,17 @@
       <div class="container">
         <div class="col-md-6 text-left"><span class="name">Ryan Lutz </span><span class="title"> &nbsp;- Graphic & Web Design</span></div>
         <div class="col-md-6 text-right">
-          <nav class="page-nav"><a href="index.html#home">home</a><a href="index.html#work">portfolio</a><a href="index.html#about">about</a></nav>
+          <nav class="page-nav"><a href="index.html#home" class="page-nav">home</a><a href="index.html#work" class="page-nav">portfolio</a><a href="index.html#about" class="page-nav">about</a></nav>
         </div>
       </div>
     </header>
     <video preload="true" autoplay loop muted class="full-video">
-      <source src="video/bold_concepts.webm" type="video/webm">
-      <source src="video/bold_concepts.mp4" type="video/mp4">
+      <source src="video/bold_concepts_white.webm" type="video/webm">
+      <source src="video/bold_concepts_white.mp4" type="video/mp4">
     </video>
     <section id="title">
-      <div class="v-center"><img src="img/hello.svg" class="intro">
-        <h2 class="intro">I enjoy bringing bold concepts to life in web & graphic design.</h2>
+      <div class="v-center"><img src="img/hello.svg" class="intro fade-in-0">
+        <h2 class="intro fade-in-3">I enjoy bringing bold concepts to life in web &amp; graphic design.</h2>
       </div>
     </section>
     <div class="page-container">
@@ -31,86 +31,108 @@
           <h1 class="text-center">My work</h1>
           <hr>
           <div id="Tiles" class="row collapse in">
-            <div id="Cycler1" class="tile-large">
+            <div class="tile-large">
               <div class="tag">Dougherty Forestry</div>
-              <div class="sub-tag">click to learn more</div><a href="doughertyforestry.html"></a><img src="./img/dougherty_forestry/torque_saw_square.jpg"><img src="./img/dougherty_forestry/tractor_saw_square.jpg"><img src="./img/dougherty_forestry/rotator_saw_square.jpg">
+              <div class="sub-tag">click to learn more</div><a href="doughertyforestry.html"></a>
+              <div class="fader"><img src="./img/dougherty_forestry/torque_saw_square.jpg"><img src="./img/dougherty_forestry/tractor_saw_square.jpg"><img src="./img/dougherty_forestry/rotator_saw_square.jpg"></div>
             </div>
-            <div class="tile"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Example1" data-target="#Example1" class="tile-button"></a>
-              <div class="tag">Dougherty Forestry</div>
-              <div class="sub-tag">click to learn more</div><img src="./img/college/february_square.jpg">
+            <div class="tile"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="LandPro" data-target="#LandPro" class="tile-button"></a>
+              <div class="tag">Land Pro Equipment</div>
+              <div class="sub-tag">click to learn more</div>
+              <div class="fader"><img src="./img/landpro/feller_terex_square.png"><img src="./img/landpro/loftness_cutter_square.png"></div>
             </div>
-            <div class="tile"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Example2" data-target="#Example2" class="tile-button"></a>
-              <div class="tag">Dougherty Forestry</div>
-              <div class="sub-tag">click to learn more</div><img src="./img/college/numbum_square.jpg">
+            <div class="tile"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="TroveJewelry" data-target="#TroveJewelry" class="tile-button"></a>
+              <div class="tag">Trove Jewelry Co</div>
+              <div class="sub-tag">click to learn more</div>
+              <div class="fader"><img src="./img/trove/business_card_square.png"><img src="./img/trove/trove_box_square.png"></div>
             </div>
             <div class="tile"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Example3" data-target="#Example3" class="tile-button"></a>
-              <div class="tag">Dougherty Forestry</div>
-              <div class="sub-tag">click to learn more</div><img src="./img/college/tide_square.jpg">
+              <div class="tag">Other Client Work</div>
+              <div class="sub-tag">click to learn more</div>
+              <div class="fader"><img src="./img/college/burger_chop_square.jpg"><img src="./img/college/numbum_square.jpg"><img src="./img/college/tide_square.jpg"></div>
             </div>
-            <div id="Cycler2" class="tile"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="College" data-target="#College" class="tile-button"></a>
+            <div class="tile"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="College" data-target="#College" class="tile-button"></a>
               <div class="tag">College Work</div>
-              <div class="sub-tag">click to learn more</div><img src="./img/college/burger_chop_square.jpg"><img src="./img/college/numbum_square.jpg"><img src="./img/college/tide_square.jpg">
+              <div class="sub-tag">click to learn more</div>
+              <div class="fader"><img src="./img/college/burger_chop_square.jpg"><img src="./img/college/numbum_square.jpg"><img src="./img/college/tide_square.jpg"></div>
             </div>
           </div>
-          <div id="College" class="row collapse slideshow-panel">
-            <button role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="btn btn-primary to-tiles">Back</button>
-            <div id="CollegeCarousel" class="slick-carousel">
-              <div class="slick-slide"><img src="./img/college/tide_boxes.jpg">
-                <p class="text-center">more words</p>
-              </div>
-              <div class="slick-slide"><img src="./img/college/burger_chop.jpg">
-                <p class="text-center">more words</p>
-              </div>
-              <div class="slick-slide"><img src="./img/college/morning_stroll.jpg">
-                <p class="text-center">more words</p>
-              </div>
+          <div id="College" visibility="hidden" class="row collapse slideshow-panel"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="to-tiles"> <span class="glyphicon glyphicon-menu-up"></span></a>
+            <div id="CollegeCarousel" data-ride="carousel" data-interval="false" class="carousel slide">
+              <div role="listbox" class="carousel-inner">
+                <div class="item active"><img src="./img/college/burger_chop.png">
+                  <div class="slide-text left dark">
+                    <h2>SWOSU</h2>
+                    <hr>
+                    <p>I studied at South Western Oklahoma State University where I earned a degree in Graphic Design. During my time here I learned printmaking, painting, drawind, animation, videography, photography, illustration, and practiced on a varity of software platforms.</p>
+                  </div>
+                </div>
+                <div class="item"><img src="./img/college/tide_boxes.png">
+                  <div class="slide-text center dark">
+                    <h3>Package Redesign: Greener Packaging Solutions</h3>
+                    <hr>
+                    <h4>(3D RENDERING)</h4>
+                    <p>The goal of this project was to recreate packaging of well known products to be sustainable and/or biodegradable. These Tide boxes are made from recycled cardboard with an inner liner and cap made of a biodegradable plastic synthesized from corn starch.</p>
+                  </div>
+                </div>
+                <div class="item"><img src="./img/college/morning_stroll.png">
+                  <div class="slide-text center light">
+                    <h3>Morning Stroll</h3>
+                    <p>Flash animation project </p>
+                  </div>
+                </div>
+              </div><a href="#CollegeCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#CollegeCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
             </div>
           </div>
-          <div id="Example1" class="row collapse slideshow-panel">
-            <button role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="btn btn-primary to-tiles">Back</button>
-            <div id="exampleCarousel1" class="slick-carousel">
-              <div class="slick-slide"><img src="./img/college/tide_boxes.jpg">
-                <p class="text-center">more words</p>
-              </div>
-              <div class="slick-slide"><img src="./img/college/burger_chop.jpg">
-                <p class="text-center">more words</p>
-              </div>
-              <div class="slick-slide"><img src="./img/college/morning_stroll.jpg">
-                <p class="text-center">more words</p>
-              </div>
+          <div id="LandPro" visibility="hidden" class="row collapse slideshow-panel"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="to-tiles"><span class="glyphicon glyphicon-menu-up"></span></a>
+            <div id="LandProCarousel" data-ride="carousel" data-interval="false" class="carousel slide">
+              <div role="listbox" class="carousel-inner">
+                <div class="item active"><img src="./img/landpro/landpro_cover.png">
+                  <div class="slide-text right light shadow-fade">
+                    <h2>LandPro Equipment</h2>
+                    <hr><a href="http://www.landproeq.com">landproeq.com</a>
+                    <h4>UI/UX, HTML5/CSS3, RESPONSIVE</h4>
+                    <p>Land Pro Equipment specializes in the sell of Terex skid steers and compact track loaders packaged with forestry and land clearing products. Land Pro Equipment needed a brand image that spoke of the type of product they sell and a website that was attractive, simple to navigate and informational.</p>
+                  </div>
+                </div>
+                <div class="item"><img src="./img/landpro/landpro_web.png"></div>
+                <div class="item"><img src="./img/landpro/landpro_interfaces.png"></div>
+              </div><a href="#LandProCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#LandProCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
             </div>
           </div>
-          <div id="Example2" class="row collapse slideshow-panel">
-            <button role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="btn btn-primary to-tiles">Back</button>
-            <div id="exampleCarousel2" class="slick-carousel">
-              <div class="slick-slide"><img src="./img/college/tide_boxes.jpg">
-                <p class="text-center">more words</p>
-              </div>
-              <div class="slick-slide"><img src="./img/college/burger_chop.jpg">
-                <p class="text-center">more words</p>
-              </div>
-              <div class="slick-slide"><img src="./img/college/morning_stroll.jpg">
-                <p class="text-center">more words</p>
-              </div>
+          <div id="TroveJewelry" visibility="hidden" class="row collapse slideshow-panel"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="to-tiles"><span class="glyphicon glyphicon-menu-up"></span></a>
+            <div id="TroveCarousel" data-ride="carousel" data-interval="false" class="carousel slide">
+              <div role="listbox" class="carousel-inner">
+                <div class="item active"><img src="./img/trove/trove_branding.png">
+                  <div class="slide-text left dark">
+                    <h2>Trove Jewelry Company</h2>
+                  </div>
+                </div>
+                <div class="item"><img src="./img/trove/trove_neclace.png"></div>
+                <div class="item"><img src="./img/trove/trove_web.png"></div>
+                <div class="item"><img src="./img/trove/business_card.png"></div>
+              </div><a href="#TroveCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#TroveCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
             </div>
           </div>
-          <div id="Example3" class="row collapse slideshow-panel">
-            <button role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="btn btn-primary to-tiles">Back</button>
-            <div id="exampleCarousel3" class="slick-carousel">
-              <div class="slick-slide"><img src="./img/college/tide_boxes.jpg">
-                <p class="text-center">more words</p>
-              </div>
-              <div class="slick-slide"><img src="./img/college/burger_chop.jpg">
-                <p class="text-center">more words</p>
-              </div>
-              <div class="slick-slide"><img src="./img/college/morning_stroll.jpg">
-                <p class="text-center">more words</p>
-              </div>
+          <div id="Example3" visibility="hidden" class="row collapse slideshow-panel"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="to-tiles"><span class="glyphicon glyphicon-menu-up"></span></a>
+            <div id="OtherCarousel" data-ride="carousel" data-interval="false" class="carousel slide">
+              <div role="listbox" class="carousel-inner">
+                <div class="item active"><img src="./img/acrossdivide/across_divide_home.png">
+                  <div class="slide-text left dark">
+                    <h3>Across The Divide</h3>
+                    <hr>
+                    <h4> <a href="http://www.acrossdivide.org">acrossdivide.org</a></h4>
+                    <p>Across the Divide Project is a platform for Chinese artists and scholars serving in American universities to share creative practice/research/teaching through exhibitions, symposiums, and other related events/activities.</p>
+                    <p>I provided web support by reworking the front-end of the website with new html and better use of css and by adding some javascript functionality. I also helped create digital brochure of artist bios and work.</p>
+                  </div>
+                </div>
+                <div class="item"><img src="./img/acrossdivide/across_divide_members.png"></div>
+              </div><a href="#OtherCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#OtherCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
             </div>
           </div>
         </div>
       </section>
-      <section id="about" class="page-section background-whitesmoke">
+      <section id="about" class="page-section secondary-1-1">
         <div class="container"><a href="*" name="about"></a>
           <h1 class="text-center">About me</h1>
           <hr>
@@ -167,19 +189,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
     <script type="text/javascript" src="./lib/slick.min.js"></script>
+    <script type="text/javascript" src="./js/tiles.js"></script>
     <script>
-      $(document).ready(function(){
-        $('#CollegeCarousel').slick({
-          dots: true,
-          infinite: true,
-          speed: 300,
-          slidesToShow: 1,
-          centerMode: true,
-          variableWidth: true
-        });
-      });
+      //smooth scrolling
       $(function() {
-        $('a[href*="#"]:not([href="#"])').click(function() {
+        $('a[href*="#"].page-nav:not([href="#"])').click(function() {
           if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
             var target = $(this.hash);
             target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -193,23 +207,18 @@
         });
       });
       
-      $('.slideshow-panel').on('shown.bs.collapse', function() {
-          var div = $(this);
-          var width = div.width();
-          console.log(width)
-          div.css('height', width / 2);
-      });
       //tiles functions
       $(".to-tiles").click(function () {
-        $this = $(this).parent('.collapse');
-        $this.collapse('hide');
+        var parent = $(this).parent('.collapse');
+        parent.collapse('hide');
       });
       $(".tile-button").click(function () {
         $('#Tiles').collapse('hide');
       });
-      
+      $('#LandProCarousel').carousel('pause');
       document.addEventListener("DOMContentLoaded", function() {
           // this function runs when the DOM is ready, i.e. when the document has been parsed
+          
           var softwareSkillsCTX = $("#SoftwareSkillsChart").get(0).getContext("2d");
           var webDesignSkillsCTX = $("#WebDesignSkillsChart").get(0).getContext("2d");
           var personalSkillsCTX = $("#PersonalSkillsChart").get(0).getContext("2d");
@@ -219,8 +228,8 @@
               datasets: [
                   {
                       label: "softwareSkillsData",
-                      fillColor: "#F14D24",
-                      highlightFill: "#32D4D6",
+                      fillColor: "#FF4900",
+                      highlightFill: "#00ECEC",
                       data: [65, 59, 80, 81, 56, 55, 40, 35]
                   }
               ]
@@ -229,44 +238,44 @@
           var webDesignSkillsData = [
               {
                   value: 10,
-                  color: "#F14D24",
-                  highlight: "#32D4D6",
+                  color: "#FF4900",
+                  highlight: "#00ECEC",
                   label: "CSS/HTML"
               },
               {
                   value: 6,
-                  color:"#F14D24",
-                  highlight: "#32D4D6",
+                  color:"#FF4900",
+                  highlight: "#00ECEC",
                   label: "UI/UX"
               },
               {
                   value: 4,
-                  color: "#F14D24",
-                  highlight: "#32D4D6",
+                  color: "#FF4900",
+                  highlight: "#00ECEC",
                   label: "Wireframing"
               },
               {
                   value: 7,
-                  color: "#F14D24",
-                  highlight: "#32D4D6",
+                  color: "#FF4900",
+                  highlight: "#00ECEC",
                   label: "Javascript/jQuery"
               },
               {
                   value: 8,
-                  color: "#F14D24",
-                  highlight: "#32D4D6",
+                  color: "#FF4900",
+                  highlight: "#00ECEC",
                   label: "PHP"
               },
               {
                   value: 7,
-                  color: "#F14D24",
-                  highlight: "#32D4D6",
+                  color: "#FF4900",
+                  highlight: "#00ECEC",
                   label: "Wordpress"
               },
               {
                   value: 6,
-                  color: "#F14D24",
-                  highlight: "#32D4D6",
+                  color: "#FF4900",
+                  highlight: "#00ECEC",
                   label: "Bootstrap" 
               }
       
@@ -277,11 +286,11 @@
               datasets: [
                   {
                       label: "Personal Skills",
-                      fillColor: "rgba(241,77,36,0.5)",
-                      strokeColor: "rgba(241,77,36,1)",
-                      pointColor: "rgba(241,77,36,1)",
+                      fillColor: "rgba(255, 73, 0, 0.5)",
+                      strokeColor: "rgba(255, 73, 0, 1)",
+                      pointColor: "rgba(255, 73, 0, 1)",
                       pointStrokeColor: "#fff",
-                      pointHighlightFill: "#32D4D6",
+                      pointHighlightFill: "#00ECEC",
                       pointHighlightStroke: "rgba(220,220,220,1)",
                       data: [7, 7, 7, 7, 7, 7, 7]
                   },
