@@ -510,18 +510,19 @@ nav#primary-navbar {
   #title h1.intro {
     width: 100%;
     text-align: right;
-    margin-top: -0.5em;
-    font-size: 2em;
+    margin-top: -6vw;
+    font-size: 9vw;
     font-weight: bolder; }
     @media (min-width: 992px) {
       #title h1.intro {
-        font-size: 4em; } }
+        margin-top: -2vw;
+        font-size: 3.3vw; } }
   #title h2.intro {
-    font-size: 1.2em;
+    font-size: 4.5vw;
     font-weight: 300; }
     @media (min-width: 992px) {
       #title h2.intro {
-        font-size: 2em; } }
+        font-size: 1.8vw; } }
 
 .tile, .tile-large {
   display: block;
