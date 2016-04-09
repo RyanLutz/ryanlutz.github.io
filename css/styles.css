@@ -239,13 +239,6 @@ img.full-img {
   width: 100vw;
   text-align: center;
   vertical-align: middle; }
-  #title img {
-    position: relative;
-    width: 80%;
-    color: #F14D24; }
-    @media (min-width: 992px) {
-      #title img {
-        width: 33.33%; } }
   #title h1.intro {
     position: relative;
     font-weight: bolder;
@@ -266,10 +259,13 @@ img.full-img {
           transform: translateY(-50%); }
 
 .page-container {
-  max-width: 1280px;
-  margin: 0 auto 2em;
-  background-color: white;
-  box-shadow: 0px 6px 32px 6px rgba(0, 0, 0, 0.15); }
+  width: 100%;
+  background-color: #fffdef; }
+  @media (min-width: 992px) {
+    .page-container {
+      max-width: 1280px;
+      margin: 0 auto 2em;
+      box-shadow: 0px 6px 32px 6px rgba(0, 0, 0, 0.15); } }
 
 section.page-section {
   margin: 0 0;
@@ -299,6 +295,8 @@ section.page-section {
 
 .secondary-1-1 {
   background-color: #CBE7E7; }
+  .secondary-1-1 hr {
+    border-top: 1px solid #badfdf; }
 
 .secondary-2-1 {
   background-color: #FFFCE0; }
@@ -401,16 +399,40 @@ nav.page-nav {
       transition: ease-out, all 0.25s; }
 
 nav#primary-navbar {
-  background-color: #CBE7E7; }
+  background-color: #CBE7E7;
+  border-color: #badfdf; }
   @media (min-width: 992px) {
     nav#primary-navbar {
       font-size: 24px; } }
+  nav#primary-navbar .navbar, nav#primary-navbar .navbar-header, nav#primary-navbar .navbar-collapse {
+    border-color: #a8d7d7; }
+  nav#primary-navbar .navbar-collapse {
+    background-color: #badfdf; }
+    @media (min-width: 992px) {
+      nav#primary-navbar .navbar-collapse {
+        background-color: #CBE7E7; } }
   nav#primary-navbar .name {
-    font-size: 24px;
     color: #F14D24; }
+    @media (min-width: 992px) {
+      nav#primary-navbar .name {
+        font-size: 1.5em; } }
   nav#primary-navbar .title {
-    font-size: 24px;
     color: white; }
+    @media (min-width: 992px) {
+      nav#primary-navbar .title {
+        font-size: 1.5em; } }
+  nav#primary-navbar button {
+    border: none;
+    height: 2.5em;
+    width: 2.5em;
+    overflow: hidden;
+    background-color: #CBE7E7; }
+    nav#primary-navbar button:active, nav#primary-navbar button:focus, nav#primary-navbar button:hover {
+      border: none;
+      background-color: #badfdf; }
+    nav#primary-navbar button span.glyphicon {
+      line-height: 0.75;
+      color: #004747; }
   nav#primary-navbar ul.nav li > a {
     font-size: 24px;
     color: #F14D24;
@@ -461,25 +483,45 @@ nav#primary-navbar {
       left: -33%;
       width: 33%;
       height: 100%;
-      background: linear-gradient(to left, rgba(0, 0, 0, 0.7) 0%, transparent 100%); }
+      background: none; }
 
 .carousel-control, .carousel-indicators {
   width: 7.5%; }
   .carousel-control:hover, .carousel-indicators:hover {
     color: #F14D24; }
+  .carousel-control span.glyphicon, .carousel-indicators span.glyphicon {
+    text-shadow: none; }
 
-.carousel-control.left {
-  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 0%);
-  transition: ease-out, all 0.75s; }
-  .carousel-control.left:hover {
-    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
-    transition: ease-out, all 0.25s; }
+.carousel-control.right, .carousel-control.left {
+  background-image: none; }
+  .carousel-control.right:hover, .carousel-control.left:hover {
+    background-image: none; }
 
-.carousel-control.right {
-  background: none; }
-  .carousel-control.right:hover {
-    background: linear-gradient(to left, white 0%, rgba(255, 255, 255, 0) 100%);
-    transition: ease-out, all 0.25s; }
+#title {
+  width: 90%;
+  margin: 0 auto;
+  color: #F14D24; }
+  @media (min-width: 992px) {
+    #title {
+      width: 33.33%; } }
+  #title img {
+    position: relative;
+    width: 100%; }
+  #title h1.intro {
+    width: 100%;
+    text-align: right;
+    margin-top: -0.5em;
+    font-size: 2em;
+    font-weight: bolder; }
+    @media (min-width: 992px) {
+      #title h1.intro {
+        font-size: 4em; } }
+  #title h2.intro {
+    font-size: 1.2em;
+    font-weight: 300; }
+    @media (min-width: 992px) {
+      #title h2.intro {
+        font-size: 2em; } }
 
 .tile, .tile-large {
   display: block;
@@ -642,6 +684,15 @@ nav#primary-navbar {
         -ms-transform: translate(0, 0em);
             transform: translate(0, 0em);
     transition: ease-out, all 0.25s; }
+
+#work {
+  padding: 0; }
+  #work .container {
+    width: 100%; }
+
+canvas.chart {
+  display: block;
+  margin: 0 auto; }
 
 .page-link {
   display: block;

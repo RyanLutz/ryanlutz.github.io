@@ -28,7 +28,7 @@
     <nav id="primary-navbar" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="glyphicon glyphicon-menu-hamburger"></span></button><a href="#" class="navbar-brand"> <span class="name">Ryan Lutz </span><span class="title">- Graphic & Web Design</span></a>
+          <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="glyphicon glyphicon-menu-hamburger"></span></button><a href="#" class="navbar-brand"> <span class="name">Ryan Lutz </span><span class="title">- Graphic &amp; Web Design</span></a>
         </div>
         <div id="navbar" aria-expanded="false" style="height: 1px;" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -42,17 +42,19 @@
     <video preload="true" autoplay loop muted class="full-video hidden-sm hidden-xs">
       <source src="video/bold_concepts_blue.webm" type="video/webm">
       <source src="video/bold_concepts_blue.mp4" type="video/mp4">
-    </video><img src="./img/bold_concepts.png" class="full-img hidden-md hidden-lg">
+    </video><img src="./img/bold_concepts_blue.png" class="full-img hidden-md hidden-lg">
     <section id="title">
-      <div class="v-center"><img src="img/hello_orange.svg" class="intro">
-        <h2 class="intro">I enjoy bringing bold concepts to life in web &amp; graphic design.</h2>
+      <div id="intro" class="v-center"><img src="img/hello_orange.svg" class="intro">
+        <h1 class="intro">My name is Ryan.</h1>
+        <h2 class="intro">
+          I enjoy bringing bold concepts to life <br>
+          in <b><i>web </i></b>&amp; <b><i>graphic design.</i></b>
+        </h2>
       </div>
     </section>
     <div class="page-container">
       <section id="work" class="page-section"><a href="*" name="work"></a>
         <div class="container">
-          <h1 class="text-center">My work</h1>
-          <hr>
           <div id="Tiles" class="row collapse in">
             <div class="tile-large">
               <div class="tag">Dougherty Forestry</div>
@@ -126,13 +128,13 @@
           <div id="TroveJewelry" visibility="hidden" class="row collapse slideshow-panel"><a role="button" data-toggle="collapse" aria-expanded="false" aria-controls="Tiles" data-target="#Tiles" class="to-tiles"><span class="glyphicon glyphicon-menu-up"></span></a>
             <div id="TroveCarousel" data-ride="carousel" data-interval="false" class="carousel slide">
               <div role="listbox" class="carousel-inner">
-                <div class="item active"><img src="./img/trove/trove_branding.png">
+                <div class="item active"><img src="./img/trove/trove_neclace_3.png">
                   <div class="slide-text left dark">
                     <h2>Trove Jewelry Company</h2>
                   </div>
                 </div>
-                <div class="item"><img src="./img/trove/trove_neclace.png"></div>
-                <div class="item"><img src="./img/trove/trove_web.png"></div>
+                <div class="item"><img src="./img/trove/trove_web_2.png"></div>
+                <div class="item"><img src="./img/trove/trove_box.png"></div>
                 <div class="item"><img src="./img/trove/business_card.png"></div>
               </div><a href="#TroveCarousel" role="button" data-slide="prev" class="left carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">Previous</span></a><a href="#TroveCarousel" role="button" data-slide="next" class="right carousel-control"><span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">Next</span></a>
             </div>
@@ -181,7 +183,7 @@
           <hr>
           <div class="row">
             <div class="col-md-4">
-              <canvas id="SoftwareSkillsChart" height="240px"></canvas>
+              <canvas id="SoftwareSkillsChart" width="280" height="240" class="chart"></canvas>
               <h3 class="text-center">Software Skills</h3>
               <p class="indent">
                  
@@ -189,7 +191,7 @@
               </p>
             </div>
             <div class="col-md-4">
-              <canvas id="WebDesignSkillsChart" height="240px"></canvas>
+              <canvas id="WebDesignSkillsChart" width="280" height="240" class="chart"></canvas>
               <h3 class="text-center col-12 omega">Web Design Skills</h3>
               <p class="indent col-12">
                  
@@ -197,7 +199,7 @@
               </p>
             </div>
             <div class="col-md-4">
-              <canvas id="PersonalSkillsChart" height="240px"></canvas>
+              <canvas id="PersonalSkillsChart" width="280" height="240" class="chart"></canvas>
               <h3 class="text-center">Personal Skills</h3>
               <p class="indent">
                  
@@ -320,46 +322,19 @@
                   },
               ]
           };
-          var options = {
-              //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
-              scaleBeginAtZero : true,
+          
       
-              //Boolean - Whether grid lines are shown across the chart
-              scaleShowGridLines : true,
+          var softwareSkillsChart = new Chart(softwareSkillsCTX).Bar(softwareSkillsData, {
       
-              //String - Colour of the grid lines
-              scaleGridLineColor : "rgba(0,0,0,.05)",
+          });
+          var webDesignSkillsChart = new Chart(webDesignSkillsCTX).PolarArea(webDesignSkillsData, {
       
-              //Number - Width of the grid lines
-              scaleGridLineWidth : 1,
+          });
+          var personalSkillsChart = new Chart(personalSkillsCTX).Radar(personalSkillsData, {
       
-              //Boolean - Whether to show horizontal lines (except X axis)
-              scaleShowHorizontalLines: true,
-      
-              //Boolean - Whether to show vertical lines (except Y axis)
-              scaleShowVerticalLines: true,
-      
-              //Boolean - If there is a stroke on each bar
-              barShowStroke : true,
-      
-              //Number - Pixel width of the bar stroke
-              barStrokeWidth : 2,
-      
-              //Number - Spacing between each of the X value sets
-              barValueSpacing : 5,
-      
-              //Number - Spacing between data sets within X values
-              barDatasetSpacing : 1,
-              responsive: true,
-      
-              //String - A legend template
-              legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
-      
-          }
-      
-          var softwareSkillsChart = new Chart(softwareSkillsCTX).Bar(softwareSkillsData, options);
-          var webDesignSkillsChart = new Chart(webDesignSkillsCTX).PolarArea(webDesignSkillsData, options);
-          var personalSkillsChart = new Chart(personalSkillsCTX).Radar(personalSkillsData, options);
+          });
+          
+          
       
       });
     </script>
