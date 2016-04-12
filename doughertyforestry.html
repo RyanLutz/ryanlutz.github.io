@@ -5,17 +5,40 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favico/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favico/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favico/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favico/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favico/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favico/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favico/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favico/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favico/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favico/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favico/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favico/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favico/favicon-16x16.png">
+    <link rel="manifest" href="img/favico/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <title>Dougherty Forestry</title>
   </head>
   <body>
-    <header class="page-header">
+    <nav id="primary-navbar" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <div class="col-md-6 text-left"><span class="name">Ryan Lutz </span><span class="title"> &nbsp;- Graphic & Web Design</span></div>
-        <div class="col-md-6 text-right">
-          <nav class="page-nav"><a href="index.html#home">home</a><a href="index.html#work">portfolio</a><a href="index.html#about">about</a></nav>
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="glyphicon glyphicon-menu-hamburger"></span></button><a href="#" class="navbar-brand"> <span class="name">Ryan Lutz </span><span class="title">- Graphic &amp; Web Design</span></a>
+        </div>
+        <div id="navbar" aria-expanded="false" style="height: 1px;" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html#home" class="page-nav">home</a></li>
+            <li><a href="index.html#work" class="page-nav">portfolio</a></li>
+            <li><a href="index.html#about" class="page-nav">about</a></li>
+          </ul>
         </div>
       </div>
-    </header><img src="./img/dougherty_forestry/tractor_saw_banner.jpg" class="full hidden">
+    </nav><img src="./img/dougherty_forestry/tractor_saw_banner.jpg" class="full hidden">
     <video preload="true" autoplay loop muted class="full-video">
       <source src="video/dougherty_forestry.webm" type="video/webm">
       <source src="video/dougherty_forestry.mp4" type="video/mp4">
@@ -114,19 +137,6 @@
           </div>
           <div class="col-md-7"></div>
         </div>
-      </div>
-    </section>
-    <section id="brochure" class="background-white">
-      <div class="container">
-        <h2 class="text-center">Product Brochures</h2>
-      </div>
-    </section>
-    <section id="other" class="background-white">
-      <div class="container">
-        <h2 class="text-center">Other Graphic Work</h2>
-        <hr><img src="./img/dougherty_forestry/posters.png" width="100%" class="img-fluid">
-        <div class="col-md-7"></div>
-        <div class="col-md-5"></div>
       </div>
     </section>
   </body>
