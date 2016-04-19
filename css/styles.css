@@ -519,7 +519,7 @@ nav#primary-navbar {
 
 #title {
   width: 90%;
-  margin: 0 auto;
+  margin: 3em auto 0;
   color: #F14D24; }
   #title img {
     position: relative;
@@ -532,7 +532,7 @@ nav#primary-navbar {
     @media (min-width: 992px) {
       #title h1.intro {
         position: absolute;
-        top:3em;
+        top:3.5em;
 
         font-size: 3.3vw; } }
   #title h2.intro {
@@ -541,7 +541,9 @@ nav#primary-navbar {
     @media (min-width: 992px) {
       #title h2.intro {
         position: absolute;
-        bottom: 3em;
+        display: block;
+        width: 100%;
+        bottom: 1em;
         font-size: 1.8vw; } }
 
 .tile, .tile-large {
