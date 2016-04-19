@@ -538,7 +538,7 @@ nav#primary-navbar {
     font-weight: 300; }
     @media (min-width: 992px) {
       #title h2.intro {
-        margin-top: 40vw;
+        margin-top: 30vw;
         font-size: 1.8vw; } }
 
 .tile, .tile-large {
