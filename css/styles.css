@@ -240,6 +240,8 @@ img.full-img {
 #title {
   height: 100vh;
   width: 100vw;
+  margin: 0 auto;
+  padding-top: 3em;
   text-align: center;
   vertical-align: middle; }
   #title h1.intro {
@@ -520,7 +522,6 @@ nav#primary-navbar {
 #title {
   position: relative;
   width: 90%;
-  margin: 3em auto 0;
   color: #F14D24; }
   #title img {
     position: relative;
