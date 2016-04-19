@@ -43,11 +43,9 @@
       <source src="video/bold_concepts_blue.webm" type="video/webm">
       <source src="video/bold_concepts_blue.mp4" type="video/mp4">
     </video><img src="./img/bold_concepts_blue.png" class="full-img hidden-md hidden-lg">
-    <section id="title">
-      <div id="intro" class="v-center">
-        <h1 class="intro">Ryan Lutz&nbsp;<span class="color-secondary-1">Design</span></h1>
-        <h2 class="intro">Specializing in brining <b>bold </b>concepts to life<br>through <i>web &amp; graphic </i>design. </h2>
-      </div>
+    <section id="title" class="text-=center">
+      <h1 class="intro">Ryan Lutz&nbsp;<span class="color-secondary-1">Design</span></h1>
+      <h2 class="intro">Specializing in brining <b>bold </b>concepts to life<br>through <i>web &amp; graphic </i>design. </h2>
     </section>
     <div class="page-container">
       <section id="work" class="page-section"><a href="*" name="work"></a>
@@ -185,7 +183,7 @@
               <canvas id="SoftwareSkillsChart" width="280" height="240" class="chart"></canvas>
               <h3 class="text-center">Software Skills</h3>
               <p class="indent">
-                 
+
                 I fell in love with web design when I first learned Adobe Creative Suite particularly the Illustrator and Flash Components while in college. I then continued to broaden and improve my skills with Adobe Creative Suite while acquiring further experience with Sublime and Atom while working at Dougherty Forestry Manufacturing and through various freelance and contract web-design jobs.
               </p>
             </div>
@@ -193,7 +191,7 @@
               <canvas id="WebDesignSkillsChart" width="280" height="240" class="chart"></canvas>
               <h3 class="text-center col-12 omega">Web Design Skills</h3>
               <p class="indent col-12">
-                 
+
                 I developed my earlier websites at the front end using css, html, flash, and javascript. My later websites required databases allowing me to learn PHP, MySQL, and AJAX.
               </p>
             </div>
@@ -201,7 +199,7 @@
               <canvas id="PersonalSkillsChart" width="280" height="240" class="chart"></canvas>
               <h3 class="text-center">Personal Skills</h3>
               <p class="indent">
-                 
+
                 I enjoy web-designing and enjoy furthering my coding skills. I am too old (though not really) to sleep very long. I am proudly addicted to coffee. I also like to run and bike. I find these activities therapeutic.
               </p>
             </div>
@@ -258,7 +256,7 @@
           }
         });
       });
-      
+
       //tiles functions
       $(".to-tiles").click(function () {
         var parent = $(this).parent('.collapse');
@@ -270,11 +268,11 @@
       $('#LandProCarousel').carousel('pause');
       document.addEventListener("DOMContentLoaded", function() {
           // this function runs when the DOM is ready, i.e. when the document has been parsed
-          
+
           var softwareSkillsCTX = $("#SoftwareSkillsChart").get(0).getContext("2d");
           var webDesignSkillsCTX = $("#WebDesignSkillsChart").get(0).getContext("2d");
           var personalSkillsCTX = $("#PersonalSkillsChart").get(0).getContext("2d");
-          
+
           var softwareSkillsData = {
               labels: ["Illustrator", "Photoshop", "Flash/Animate", "Premiere Pro", "After Effects", "Indesign", "Atom", "Gulp"],
               datasets: [
@@ -286,7 +284,7 @@
                   }
               ]
           };
-          
+
           var webDesignSkillsData = [
               {
                   value: 10,
@@ -328,11 +326,11 @@
                   value: 6,
                   color: "#FF4900",
                   highlight: "#00ECEC",
-                  label: "Bootstrap" 
+                  label: "Bootstrap"
               }
-      
+
           ];
-          
+
           var personalSkillsData = {
               labels: ["Eating", "Coffee", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
               datasets: [
@@ -348,20 +346,20 @@
                   },
               ]
           };
-          
-      
+
+
           var softwareSkillsChart = new Chart(softwareSkillsCTX).Bar(softwareSkillsData, {
-      
+
           });
           var webDesignSkillsChart = new Chart(webDesignSkillsCTX).PolarArea(webDesignSkillsData, {
-      
+
           });
           var personalSkillsChart = new Chart(personalSkillsCTX).Radar(personalSkillsData, {
-      
+
           });
-          
-          
-      
+
+
+
       });
     </script>
   </body>
