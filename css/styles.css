@@ -518,6 +518,7 @@ nav#primary-navbar {
     background-image: none; }
 
 #title {
+  position: relative;
   width: 90%;
   margin: 3em auto 0;
   color: #F14D24; }
