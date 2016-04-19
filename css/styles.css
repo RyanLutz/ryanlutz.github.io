@@ -202,6 +202,9 @@
 body {
   color: #222425; }
 
+.color-secondary-1 {
+  color: #00ECEC; }
+
 html {
   min-height: 100%;
   min-width: 100%;
@@ -373,7 +376,24 @@ header.page-header {
     color: #ffbfaf; }
 
 footer.page-footer {
-  position: relative; }
+  position: relative;
+  padding-bottom: 2em; }
+  footer.page-footer .linked-in {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    background-repeat: no-repeat;
+    background-image: url(../img/icons/linkedin_orange.svg); }
+    footer.page-footer .linked-in:hover {
+      background-image: url(../img/icons/linkedin_blue.svg); }
+  footer.page-footer .email {
+    line-height: 1em;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: lighter;
+    color: #F14D24; }
+    footer.page-footer .email:hover {
+      color: #00ECEC; }
 
 nav.page-nav {
   display: block;
@@ -501,27 +521,24 @@ nav#primary-navbar {
   width: 90%;
   margin: 0 auto;
   color: #F14D24; }
-  @media (min-width: 992px) {
-    #title {
-      width: 33.33%; } }
   #title img {
     position: relative;
     width: 100%; }
   #title h1.intro {
     width: 100%;
-    text-align: right;
     margin-top: -6vw;
     font-size: 9vw;
     font-weight: bolder; }
     @media (min-width: 992px) {
       #title h1.intro {
-        margin-top: -2vw;
+        margin-top: 0;
         font-size: 3.3vw; } }
   #title h2.intro {
     font-size: 4.5vw;
     font-weight: 300; }
     @media (min-width: 992px) {
       #title h2.intro {
+        margin-top: 40vw;
         font-size: 1.8vw; } }
 
 .tile, .tile-large {
@@ -687,7 +704,7 @@ nav#primary-navbar {
     transition: ease-out, all 0.25s; }
 
 #work {
-  padding: 0; }
+  padding: 2em 0 0 0; }
   #work .container {
     width: 100%; }
 
