@@ -201,7 +201,7 @@
 
 body {
   color: #2f3d36;
-  font-family: "adelle-sans"; }
+  font-family: "adelle-sans", sans-serif; }
 
 .font-color-primary {
   color: #F03318; }
@@ -210,7 +210,8 @@ body {
   color: #26FFBD; }
 
 h1, h2, h3, h4 {
-  font-family: "adelle"; }
+  font-family: "adelle", serif;
+  color: #678575; }
 
 html {
   min-height: 100%;
