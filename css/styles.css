@@ -267,8 +267,11 @@ section#title {
       box-shadow: 0px 6px 32px 6px rgba(0, 0, 0, 0.15); } }
 
 .page-section {
+  background-color: white;
   margin: 0 0;
   padding: 2em 0; }
+  .page-section.background-color-secondary {
+    background-color: #e6ebe8; }
 
 @media screen and (max-device-width: 800px) {
   #bgvid {
@@ -361,7 +364,7 @@ nav#primary-navbar {
       nav#primary-navbar .name {
         font-size: 1.5em; } }
   nav#primary-navbar .title {
-    color: #ACBFB5; }
+    color: white; }
     @media (min-width: 992px) {
       nav#primary-navbar .title {
         font-size: 1.5em; } }
@@ -671,6 +674,13 @@ canvas.chart {
   background-image: url(../img/other.svg); }
   #Other-Link:hover {
     background-image: url(../img/other_hover.svg); }
+
+.banner {
+  padding-top: 4em;
+  padding-bottom: 1em;
+  background-color: #2f3d36; }
+  .banner h1 {
+    color: #e6ebe8; }
 
 .video-inlay {
   position: relative; }
