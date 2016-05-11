@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://use.typekit.net/zuz3hyr.js"></script>
+    <script>
+      try{Typekit.load({ async: true });}catch(e){}
+      
+    </script>
     <link rel="apple-touch-icon" sizes="57x57" href="img/favico/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favico/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="img/favico/apple-icon-72x72.png">
@@ -76,21 +81,11 @@
         </div>
       </div>
     </section>
-    <section id="nav" class="page-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-4"><a href="doughertyforestry.html#website" id="Website-Link" class="page-link"><span>Website</span></a></div>
-          <div class="col-xs-4"><a href="doughertyforestry.html#brochure" id="Brochure-Link" class="page-link"><span>Print</span></a></div>
-          <div class="col-xs-4"><a href="doughertyforestry.html#other" id="Other-Link" class="page-link"><span>Other</span></a></div>
-        </div>
-      </div>
-    </section>
     <section id="website" class="page-section"><img src="./img/dougherty_forestry/turbosaw_web.jpg" width="100%" min-width="960px">
       <div class="container">
-        <div class="row"><a href="*" name="website"></a>
-          <hr>
-          <h2 class="text-center">Web Presence</h2>
-          <hr>
+        <h2 class="text-center">Web Presence</h2>
+        <hr>
+        <div class="row">
           <h4 class="col-md-6"><a href="http://turbosaw.com">turbosaw.com</a></h4>
           <h4 class="col-md-6 text-right">ui/ux, html5/css3, responsive, CMS, PHP</h4>
           <hr>
@@ -131,15 +126,77 @@
             <p>The database is queried for the a specified closest dealers. The dealer database management system allows administrative users to quickly create a dealer by searching Google’s existing places database and auto fill address, website, and location information. Dealer participation can be managed quickly via a toggle button on the dealer list.</p>
           </div>
         </div>
+        <hr>
         <div class="row">
           <div class="col-md-5">
             <h3>Custom CMS</h3>
+            <h5 class="font-color-primary">CMS, PHP/MySQL, google maps api</h5>
             <hr>
             <p>Dougherty Forestry management personal can update the dealer database, create and update trade-show events, post news articles, and manage customer testimonials via a custom, light-weight csm tailored specifically for the company’s needs. Time and research proved that many pre-made cms solutions such as Wordpress and Magento were too bulky and complex for the desired outcomes, and a simple and precise php based cms solution was developed quickly with little to no external cost.</p>
           </div>
-          <div class="col-md-7"></div>
+          <div class="col-md-7"><img src="./img/dougherty_forestry/turbosaw_admin.png" width="100%" class="img-fluid"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"><a data-toggle="modal" data-target="#AdminLogin"><img src="./img/dougherty_forestry/admin_login.png" width="100%" class="img-fluid">
+              <h4 class="text-center recede">Admin login</h4></a>
+            <div id="AdminLogin" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" class="modal fade">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <h3 class="text-center recede">Admin login</h3><img src="./img/dougherty_forestry/admin_login.png" width="100%" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6"><a data-toggle="modal" data-target="#AdminNewUser"><img src="./img/dougherty_forestry/admin_new_user.png" width="100%" class="img-fluid">
+              <h4 class="text-center recede">New user</h4></a>
+            <div id="AdminNewUser" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" class="modal fade">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <h3 class="text-center recede">New User</h3><img src="./img/dougherty_forestry/admin_new_user.png" width="100%" class="img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"><img src="./img/dougherty_forestry/admin_ok_dealers.png" width="100%" class="img-fluid">
+            <h4 class="text-center recede-some">Oklahoma dealers</h4>
+          </div>
+          <div class="col-md-6"><img src="./img/dougherty_forestry/admin_edit_dealer.png" width="100%" class="img-fluid">
+            <h4 class="text-center recede-some">Edit dealer</h4>
+          </div>
         </div>
       </div>
     </section>
+    <footer class="page-footer page-section background-color-secondary">
+      <div class="container">
+        <h1 class="text-center">Connect with me</h1>
+        <hr>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="row">
+              <div class="col-md-4 text-right"><a href="https://www.linkedin.com/in/ryanlutzdesign" target="_blank" class="linked-in"> </a></div>
+              <div class="col-md-8 text-left"><a href="#" class="email">ryanlutz.design@gmail.com</a></div>
+            </div>
+            <!--form#Contact(method="post", action="")
+            .row
+              .col-md-4.form-group
+                input#Name.form-control(type="text" placeholder="Name" required)
+              .col-md-4.form-group
+                input#Email.form-control(type="email" placeholder="Email" required)
+              .col-md-4.form-group
+                input#Company.form-control(type="text" placeholder="Company")
+            .row
+              .col-md-9
+                textarea#Message.form-control(rows="3")
+              .col-md-3
+                button.btn.btn-default.send(type="submit") Send
+            -->
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </html>
